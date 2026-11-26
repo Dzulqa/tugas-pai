@@ -22,7 +22,7 @@ export default function Navbar({ onOpenSearch, activeSection }: NavbarProps) {
     { href: "#peninggalan", label: "Peninggalan" },
     { href: "#pusat", label: "Pusat Peradaban" },
     { href: "#kuis", label: "Kuis PAI" },
-    { href: "#proyek-tim", label: "Proyek & Tim" },
+    { href: "#proyek-tim", label: "Proyek & Profil" },
     { href: "#sumber", label: "Daftar Pustaka" },
   ];
 

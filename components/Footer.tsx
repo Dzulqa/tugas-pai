@@ -51,13 +51,13 @@ export default function Footer() {
           {/* Team Info */}
           <div className="space-y-1.5">
             <span className="font-semibold text-white block text-xs uppercase tracking-wider">
-              Identitas Kelompok
+              Identitas Pengembang
             </span>
             <p className="text-slate-300">
-              <strong>Kelompok 3:</strong> M. Rayhan Pratama (Ketua), Aisyah Nur Salsabila, Faris Zaidan, Nabila Zahra.
+              <strong>Pembuat:</strong> Ahmad Hilbram Dzulqa (Kelas 12 RPL 2)
             </p>
             <p className="text-[11px] text-slate-500 pt-1">
-              Guru Pembimbing: Ust. Drs. H. Ahmad Fauzi, M.Pd.I
+              Guru Pembimbing: Pak Rofiq
             </p>
             <button
               onClick={scrollToTop}

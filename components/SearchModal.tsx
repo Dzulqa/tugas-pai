@@ -155,7 +155,7 @@ export default function SearchModal({
 
         <div className="px-3.5 py-2 bg-slate-950 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500">
           <span>Tekan ESC untuk keluar</span>
-          <span>PAI Kelas XII • Kelompok 3</span>
+          <span>PAI Kelas 12 RPL 2 • Ahmad Hilbram Dzulqa</span>
         </div>
       </div>
     </div>

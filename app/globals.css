@@ -511,6 +511,9 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
+  .h-24 {
+    height: calc(var(--spacing) * 24);
+  }
   .h-32 {
     height: calc(var(--spacing) * 32);
   }
@@ -577,8 +580,8 @@
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
-  .w-16 {
-    width: calc(var(--spacing) * 16);
+  .w-24 {
+    width: calc(var(--spacing) * 24);
   }
   .w-32 {
     width: calc(var(--spacing) * 32);
@@ -624,6 +627,9 @@
   }
   .flex-1 {
     flex: 1;
+  }
+  .flex-shrink-0 {
+    flex-shrink: 0;
   }
   .shrink-0 {
     flex-shrink: 0;
@@ -1040,6 +1046,12 @@
   }
   .bg-emerald-500 {
     background-color: var(--color-emerald-500);
+  }
+  .bg-emerald-500\/10 {
+    background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-emerald-500) 10%, transparent);
+    }
   }
   .bg-emerald-500\/20 {
     background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 20%, transparent);
@@ -1738,6 +1750,12 @@
       --tw-shadow-color: color-mix(in oklab, var(--color-emerald-950) var(--tw-shadow-alpha), transparent);
     }
   }
+  .shadow-emerald-950\/40 {
+    --tw-shadow-color: color-mix(in srgb, oklch(26.2% 0.051 172.552) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-emerald-950) 40%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
   .ring-emerald-400 {
     --tw-ring-color: var(--color-emerald-400);
   }
@@ -1994,6 +2012,9 @@
     .sm\:h-8 {
       height: calc(var(--spacing) * 8);
     }
+    .sm\:h-28 {
+      height: calc(var(--spacing) * 28);
+    }
     .sm\:h-52 {
       height: calc(var(--spacing) * 52);
     }
@@ -2008,6 +2029,9 @@
     }
     .sm\:w-8 {
       width: calc(var(--spacing) * 8);
+    }
+    .sm\:w-28 {
+      width: calc(var(--spacing) * 28);
     }
     .sm\:w-auto {
       width: auto;
@@ -2032,6 +2056,9 @@
     }
     .sm\:items-end {
       align-items: flex-end;
+    }
+    .sm\:items-start {
+      align-items: flex-start;
     }
     .sm\:justify-center {
       justify-content: center;
@@ -2077,6 +2104,9 @@
     }
     .sm\:pt-16 {
       padding-top: calc(var(--spacing) * 16);
+    }
+    .sm\:text-left {
+      text-align: left;
     }
     .sm\:text-right {
       text-align: right;

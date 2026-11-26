@@ -65,10 +65,10 @@ export default function GroupDocSection() {
               <span>Manajemen Proyek &amp; Dokumentasi</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-              Dokumentasi Kelompok &amp; Perkembangan Proyek
+              Dokumentasi Proyek &amp; Perkembangan Portofolio
             </h2>
             <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">
-              Portofolio pengerjaan tugas besar Pendidikan Agama Islam: alur kerja tahapan, profil anggota, notulensi berkala, dan refleksi nilai.
+              Portofolio pengerjaan tugas mandiri Pendidikan Agama Islam: alur kerja tahapan, profil pengembang, catatan bimbingan, dan refleksi nilai.
             </p>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function GroupDocSection() {
           </div>
 
           <div className="p-3 rounded-lg bg-slate-900/40 border border-slate-800">
-            <span className="text-slate-400 block text-[11px]">Kelompok Belajar:</span>
+            <span className="text-slate-400 block text-[11px]">Pembuat Proyek:</span>
             <span className="font-semibold text-emerald-400 block mt-0.5">{PROJECT_METADATA.groupName}</span>
             <span className="text-[10px] text-slate-500">{PROJECT_METADATA.academicYear}</span>
           </div>
@@ -123,7 +123,7 @@ export default function GroupDocSection() {
             }`}
           >
             <IconUsers className="w-3.5 h-3.5 text-teal-400" />
-            <span>2. Profil 4 Anggota Tim</span>
+            <span>2. Profil Pengembang (12 RPL 2)</span>
           </button>
 
           <button
@@ -135,7 +135,7 @@ export default function GroupDocSection() {
             }`}
           >
             <IconClock className="w-3.5 h-3.5 text-amber-400" />
-            <span>3. Notulensi Kerja ({logs.length} Rapat)</span>
+            <span>3. Catatan Kerja &amp; Bimbingan ({logs.length})</span>
           </button>
 
           <button
@@ -198,32 +198,45 @@ export default function GroupDocSection() {
           </div>
         )}
 
-        {/* Tab 2: Profil Anggota Tim */}
+        {/* Tab 2: Profil Pengembang */}
         {activeTab === "anggota" && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in duration-200">
+          <div className="max-w-3xl mx-auto animate-in fade-in duration-200">
             {TEAM_MEMBERS.map((m) => (
-              <div key={m.id} className="p-4 rounded-xl bg-slate-900/50 border border-slate-800 space-y-3">
-                <div className="w-16 h-16 rounded-xl overflow-hidden mx-auto bg-slate-800 border border-slate-700">
-                  <img src={m.avatar} alt={m.name} className="w-full h-full object-cover" loading="lazy" />
+              <div key={m.id} className="p-6 sm:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 shadow-xl space-y-6">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-slate-800 border-2 border-emerald-500/30 flex-shrink-0 shadow-lg shadow-emerald-950/40">
+                    <img src={m.avatar} alt={m.name} className="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                  <div className="space-y-1.5 flex-1">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+                      <span>{m.studentId}</span>
+                    </div>
+                    <h4 className="text-xl sm:text-2xl font-bold text-white tracking-tight">{m.name}</h4>
+                    <p className="text-sm font-semibold text-emerald-400">{m.role}</p>
+                    <p className="text-xs text-slate-400">{m.division}</p>
+                  </div>
                 </div>
 
-                <div className="text-center space-y-0.5">
-                  <h4 className="text-sm font-bold text-white">{m.name}</h4>
-                  <p className="text-xs font-semibold text-emerald-400">{m.role}</p>
-                  <p className="text-[11px] text-slate-500 font-mono">{m.studentId}</p>
+                <div className="p-4 rounded-xl bg-slate-950/70 border border-slate-800/80">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+                    &ldquo;{m.quote}&rdquo;
+                  </p>
                 </div>
 
-                <p className="text-xs text-slate-300 text-center leading-relaxed">
-                  {m.bio}
-                </p>
+                <div className="space-y-2">
+                  <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Deskripsi &amp; Peran:</span>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    {m.bio}
+                  </p>
+                </div>
 
-                <div className="pt-2 border-t border-slate-800/80 text-[11px]">
-                  <span className="font-semibold text-slate-400 block mb-1">Tugas Utama:</span>
-                  <ul className="space-y-0.5 text-slate-300">
+                <div className="pt-4 border-t border-slate-800 text-xs">
+                  <span className="font-semibold text-slate-300 block mb-2 text-xs uppercase tracking-wider">Tugas &amp; Kontribusi Utama:</span>
+                  <ul className="space-y-2 text-slate-300">
                     {m.contributions.map((c, i) => (
-                      <li key={i} className="flex items-start gap-1">
-                        <span className="text-emerald-400">•</span>
-                        <span>{c}</span>
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-emerald-400 font-bold mt-0.5">✓</span>
+                        <span className="text-xs sm:text-sm">{c}</span>
                       </li>
                     ))}
                   </ul>
@@ -237,7 +250,7 @@ export default function GroupDocSection() {
         {activeTab === "notulensi" && (
           <div className="space-y-4 animate-in fade-in duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs text-slate-400">Total {logs.length} catatan musyawarah kelompok</span>
+              <span className="text-xs text-slate-400">Total {logs.length} catatan kerja &amp; bimbingan mandiri</span>
               <button
                 onClick={() => setIsAddingLog(!isAddingLog)}
                 className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium"

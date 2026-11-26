@@ -339,11 +339,11 @@ export default function QuizSection() {
                 <div className="pt-2 flex items-center justify-between text-[11px] text-slate-400 max-w-md mx-auto">
                   <div className="text-left">
                     <p>Guru Pembimbing:</p>
-                    <p className="font-semibold text-slate-200 mt-3">Ust. Drs. H. Ahmad Fauzi, M.Pd.I</p>
+                    <p className="font-semibold text-slate-200 mt-3">Pak Rofiq</p>
                   </div>
                   <div className="text-right">
-                    <p>Kelompok 3 (Al-Farabi):</p>
-                    <p className="font-semibold text-slate-200 mt-3">M. Rayhan Pratama</p>
+                    <p>Pengembang Proyek:</p>
+                    <p className="font-semibold text-slate-200 mt-3">Ahmad Hilbram Dzulqa (12 RPL 2)</p>
                   </div>
                 </div>
               </div>

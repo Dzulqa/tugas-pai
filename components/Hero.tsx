@@ -19,7 +19,7 @@ export default function Hero() {
             <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
             <span>Tugas Pendidikan Agama Islam & Budi Pekerti</span>
             <span className="text-slate-500 hidden xs:inline">•</span>
-            <span className="text-emerald-400">Kelompok 3 (Al-Farabi)</span>
+            <span className="text-emerald-400">Ahmad Hilbram Dzulqa • 12 RPL 2</span>
           </div>
 
           {/* Main Headline */}
